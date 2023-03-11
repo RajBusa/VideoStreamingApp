@@ -1,12 +1,14 @@
 import React from 'react'
+import logo from '../assets/pngegg.png'
+import '../CSS/navbar.css'
 
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-gray ">
+        <div className="container-fluid d-flex justify-content-around">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-mdb-toggle="collapse"
             data-mdb-target="#navbarSupportedContent"
@@ -14,105 +16,75 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-          </div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Dashboard
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Team
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Projects
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="d-flex align-items-center">
-            <a class="text-reset me-3" href="#">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-
-            <div class="dropdown">
-              <a
-                class="text-reset me-3 dropdown-toggle hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fas fa-bell"></i>
-                <span class="badge rounded-pill badge-notification bg-danger">
-                  1
-                </span>
+          <div id="navbarSupportedContent">
+            <div className="container-fluid d-flex align-items-center">
+              <img src={logo} className="rounded-circle me-2" height="25" />
+              <a className="navbar-brand" href="#">
+                Browse
               </a>
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Some news
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another news
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
             </div>
-            <div class="dropdown">
+          </div>
+
+          <div className="container-fluid w-50">
+            <div class="input-group">
+              <input
+                type="text"
+                className="ps-4 form-control rounded-start-pill bg-dark border border-secondary placeholder-secondary" 
+                placeholder="Search"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-secondary rounded-end-pill px-4 text-light"
+                type="button"
+                id="button-addon2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> 
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className="d-flex align-items-center">
+            <div className="dropdown">
               <a
-                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                className="dropdown-toggle d-flex align-items-center hidden-arrow"
                 href="#"
-                id="navbarDropdownMenuAvatar"
-                role="button"
-                data-mdb-toggle="dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                  class="rounded-circle"
+                  className="rounded-circle"
                   height="25"
                   alt="Black and White Portrait of a Man"
                   loading="lazy"
                 />
               </a>
               <ul
-                class="dropdown-menu dropdown-menu-end"
+                className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="navbarDropdownMenuAvatar"
               >
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     My profile
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Settings
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
                     Logout
                   </a>
                 </li>

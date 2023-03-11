@@ -1,0 +1,16 @@
+.placeholder-secondary::placeholder {
+  color: gray;
+  opacity: 1;
+}
+.placeholder-secondary {
+  color: white;
+}
+.placeholder-secondary:focus {
+  color: white;
+}
+.bg-gray {
+  background-color: #25282c;
+}
+.navbar {
+    box-shadow: 0 3px 18px 1px rgba(0,0,0,1);;
+}
